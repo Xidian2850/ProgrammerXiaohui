@@ -36,7 +36,7 @@ public class MyLinkedList {
             last = insertedNode;
         }else {
             //插入中间
-            Node prevNode = get(index-1);
+            Node prevNode = get(index-1);//获得尾节点的前一个节点
             insertedNode.next = prevNode.next;
             prevNode.next = insertedNode;
         }
@@ -103,8 +103,8 @@ public class MyLinkedList {
      * 链表节点
      */
     private static class Node {
-        int data;
-        Node next;
+        int data = 0;
+        Node next = null;
 
         Node(int data) {
             this.data = data;
